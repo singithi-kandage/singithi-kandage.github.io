@@ -1,0 +1,549 @@
+/*Main*/
+*{
+	margin:0;
+	padding:0;
+}
+
+body
+{
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif !important;
+	overflow-x: hidden;
+	background: url('images/bg2.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+
+
+.container-fluid{
+	margin: 0 !important;
+	padding:0 !important;
+}
+
+#projects-viewer-info::-webkit-scrollbar {
+    width: 1em;
+}
+ 
+#projects-viewer-info::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+#projects-viewer-info::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+/*Text*/
+p {
+	font-size: 1.1vw;
+}
+
+h2 {
+	text-transform: uppercase;
+	width: 18%;
+	padding:0.25em;
+	border: 1px solid orange;
+	font-size: 2vw;
+}
+
+h3 {
+	font-size: 1vw;
+}
+
+i {
+	margin-right: 0.5em;
+}
+
+b {
+	color: rgb(68, 57, 68);
+}
+
+a {
+	color: inherit;
+}
+
+a:hover {
+	color: orange;
+	text-decoration: none;
+}
+
+
+
+/*Header*/
+#header{
+	padding-top: 7vw;
+	padding-left: 20vw;
+}
+.header-text{
+font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif !important;
+	font-size: 10vw;
+	text-transform: uppercase;
+	color: orange;
+	margin-bottom: -1vw;
+	padding-left:.25em;
+	border: 1px solid orange;
+	-webkit-text-stroke-width: 0.5px;
+   -webkit-text-stroke-color: grey;
+}
+
+
+#nav-div{
+	width: 100vw;
+	height: 50px;
+	background-color: rgb(221, 220, 234);
+	position: fixed;
+	top: 0;
+	z-index: 3;
+	box-shadow: 5px 10px 15px rgba(0,0,0, 0.1);
+}
+
+#nav-div ul{
+	display:inline;
+	float: left;
+	padding-top:.5vw;
+	margin-left: 10vw;
+}
+
+#nav-div li{
+	display: inline;
+	margin: 1vw;
+	padding: 0 1vw .5vw 1vw;
+	font-size: 0.90vw;	
+}
+
+#nav-div li:hover{
+	color: orange;
+}
+
+.active{
+	border-bottom: 2px solid silver;
+}
+
+#brand{
+	width: 7em;
+	float: left;
+	height: 100%;
+	position: absolute;
+}
+#brand span{
+	width: 100%;
+	padding-top:.5em;
+	padding-left: 1em;
+	position: absolute;
+	z-index:2;
+	font-size: 1.25em;
+	font-weight: bold;
+	text-transform: uppercase;
+	color:white;
+}
+#brand-logo{
+	width: 55px;
+	height:auto;
+	margin:0;
+	padding-top:.5em;
+	padding-left: 1em;
+	position: absolute;
+	z-index:2;
+	top:0;
+}
+#brand-shape{
+	width: 100%;
+	height: 120%;
+	background-color: orange;
+	color: black;
+	transform: skewX(40deg);
+	margin-left: -2em;
+	position:absolute;
+	z-index:-1;
+}
+
+
+/* Page Sections*/
+.tapered-section{ 
+	height: auto;
+	position: relative;
+	z-index: 1;
+}
+.tapered-section > .tapered-head{
+	height: auto; 
+	width: 80vw;
+	padding-top: 10vh;
+	margin: 0 auto;
+}
+.tapered-section > .tapered-tail{
+	width: 100vw;
+	height: 130vh;
+	position: relative
+}
+
+
+
+
+
+#home-parallel-div{
+	-webkit-clip-path: polygon(90% 60%, 100% 77%, 100% 100%, 54.5% 100%, 35% 60%);
+	clip-path: polygon(90% 60%, 100% 77%, 100% 100%, 54.5% 100%, 35% 60%);
+	shape-outside: polygon(90% 60%, 100% 77%, 100% 100%, 54.5% 100%, 35% 60%);
+	height: 100%;
+	width: 100vw;
+	shape-margin: 5vw;
+	background: linear-gradient(rgba(206, 242, 147,0.7), rgb(200,199,215));
+	position: absolute;
+	float: right;
+	bottom: 0;
+}
+
+
+
+#home-left-shape{
+	-webkit-clip-path: polygon(0 0, 40% 0, 100% 100%, 0% 100%);
+	clip-path: polygon(0 0, 40% 0, 100% 100%, 0% 100%);
+	shape-outside:  polygon(0 0, 40% 0, 100% 100%, 0% 100%);
+	float: left;
+	width: 95%;
+	height: 100%;
+	background: linear-gradient(transparent, pink);
+	position: absolute;
+	z-index:-1;
+}
+#home-left-shape-inner{
+	-webkit-clip-path: polygon(0 0, 4% 0, 46% 55.5%, 0 55.5%);
+	clip-path: polygon(0 0, 4% 0, 46% 55.5%, 0 55.5%);
+	shape-outside: polygon(0 0, 4% 0, 46% 55.5%, 0 55.5%);
+	float: left;
+	width: 80%;
+	height: 100%;
+	shape-margin: 5vw;
+	background: linear-gradient(rgba(100,100,100,0.4), rgba(100,100,100,0.1));
+}
+#home-left-shape-inner-nested{
+	-webkit-clip-path: polygon(0 25%, 0% 100%, 58% 100%);
+	clip-path: polygon(0 25%, 0% 100%, 58% 100%);
+	shape-outside: polygon(0 25%, 0% 100%, 58% 100%);
+	float: left;
+	width: 69%;
+	height: 100%;
+	shape-margin: 5vw;
+	background: linear-gradient(rgb(0,0,0), rgb(100,100,100));
+	opacity:0.7;
+	position: absolute;
+	z-index:3;
+}
+#home-right-shape{
+	-webkit-clip-path: polygon(0% 0, 100% 0, 100% 55%);
+	clip-path: polygon(0% 0, 100% 0, 100% 55%);
+	shape-outside: polygon(0% 0, 100% 0, 100% 55%);
+	width: 25%;
+	height: 100%;
+	shape-margin: 5vw;
+	background: linear-gradient(rgba(100,100,100,1), rgba(0,0,0, 0.95));
+	position: absolute;
+	z-index:3;
+	right: 0;
+}
+
+
+#about-left-shape{
+	-webkit-clip-path: polygon(0 20%, 60% 20%, 100% 100%, 20% 100%, 0 54%);
+	clip-path: polygon(0 20%, 60% 20%, 100% 100%, 20% 100%, 0 54%);
+	shape-outside: polygon(0 20%, 60% 20%, 100% 100%, 20% 100%, 0 54%);
+	float: left;
+	width: 118.5%;
+	height: 100%;
+	shape-margin: 2vw;
+	background: linear-gradient(rgb(255, 234, 232), grey);
+	overflow:hidden;
+	position: absolute;
+}
+
+#about-left-shape-inner_left{
+	-webkit-clip-path: polygon(0 55%, 0 100%, 40% 100%);
+	clip-path: polygon(0 55%, 0 100%, 40% 100%);
+	shape-outside: polygon(0 55%, 0 100%, 40% 100%);
+	float: left;
+	width: 50%;
+	height: 100%;
+	shape-margin: 5vw;
+	background-color: transparent;
+	overflow:hidden;
+}
+
+#about-left-shape-inner_right{
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%);
+	clip-path: polygon(0 0, 100% 0, 100% 100%);
+	shape-outside: polygon(0 0, 100% 0, 100% 100%);
+	float: right;
+	width: 50%;
+	height: 100%;
+	shape-margin: 5vw;
+	background-color: transparent;
+	overflow:hidden;
+}
+
+#about-right-shape{
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 56%, 61% 56%);
+	clip-path: polygon(0 0, 100% 0, 100% 56%, 61% 56%);
+	shape-outside: polygon(0 0, 100% 0, 100% 56%, 61% 56%);
+	float: right;
+	right: 0;
+	width: 46%;
+	height: 100%;
+	shape-margin: 2vw;
+	background-color: rgba(200,199,215,1);
+	overflow:hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+#about-right-shape img{
+	height: auto;
+	width: 100%;
+	float: right;
+	margin-top: 8vh;
+}
+
+
+#content-about{
+	margin-top:25vh; 
+	padding:2em;
+}
+
+#content-about i{
+	font-size: .75em;
+}
+
+/********************************************************** CSS - PROJECTS **********************************************************/
+
+#projects-left-shape{
+	-webkit-clip-path: polygon(0 0, 25% 0, 75% 100%, 0% 100%);
+	clip-path: polygon(0 0, 25% 0, 75% 100%, 0% 100%);
+	shape-outside: polygon(0 0, 25% 0, 75% 100%, 0% 100%);
+	float: left;
+	width: 79%;
+	height: 100%;
+	shape-margin: 2vw;
+	background-color: rgba(232, 206, 214, 1);
+	overflow:hidden;
+	position:absolute;
+	z-index: 2;
+}
+
+#projects-left-shape-inner{
+	-webkit-clip-path: polygon(10% 0, 100% 0, 100% 100%, 90% 100%);
+	clip-path: polygon(10% 0, 100% 0, 100% 100%, 90% 100%);
+	shape-outside:  polygon(10% 0, 100% 0, 100% 100%, 90% 100%);
+	float: right;
+	width: 68%;
+	height: 100%;
+	shape-margin: 6vw;
+	background-color: white;
+	overflow:hidden;
+}
+
+#projects-viewer{
+	height: 87vh;
+	width: 50%;
+	overflow: hidden;
+	margin-top: 2em;
+	position: absolute;
+	z-index: 1;
+	right: 0;
+}
+#projects-viewer-image{
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	
+}
+#projects-viewer-info{
+	height: 60%;
+	padding: 0 2em;
+	margin: 7vw 0 2vw 2.5vw ;
+	direction: rtl;
+	overflow-y: scroll;
+}
+.project-info {
+	direction: ltr;
+}
+
+#projects-slideshow-container{
+	height: 5vw;
+	width: 60%;
+	display: inline-block;
+	position: absolute;
+	padding-left: 2.5em;
+}
+#projects-slideshow {
+	height: 100%;
+	width: 94%;
+	overflow: hidden;
+	display: inline-block;
+	margin-left:.4em;
+}
+#projects-slides {
+	height: 100%;
+	width: 200vw;
+	display: inline-block;
+}
+.arrow {
+	width: 2%;
+	padding: 1.8em .25em;
+	display: inline-block;
+	font-size: 1vw;
+}
+
+#left-arrow {
+	float:left;
+}
+
+#right-arrow {
+	float:right;
+}
+.slide {
+	width: 15vw;
+	height: 100%;
+	background: linear-gradient(rgba(200,200,200, 0.2), grey);
+	display: inline-block;
+	font-size: 1vw;
+	padding: 0.5em ;
+}
+.slide:hover{
+	background: linear-gradient(rgba(200,200,200, 0.2), white);
+}
+.project{
+	visibility: hidden;
+}
+
+/********************************************************** CSS - EXPERIENCE **********************************************************/
+
+#experience-left-shape{
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 45% 100%, 0 11%);
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 45% 100%, 0 11%);
+	shape-outside: polygon(0 0, 100% 0, 100% 100%, 45% 100%, 0 11%);
+	float: left;
+	width: 100%;
+	height: 100%;
+	shape-margin: 5vw;
+	position:absolute;
+	background: linear-gradient(rgba(50, 50, 50, 0.7), rgba(50, 50, 50, 0.7), transparent);
+	right: 0;
+}
+#experience-left-shape-inner_left{
+	-webkit-clip-path: polygon(0 20%, 0% 100%, 100% 100%);
+	clip-path: polygon(0 20%, 0% 100%, 100% 100%);
+	shape-outside: polygon(0 20%, 0% 100%, 100% 100%);
+	float: left;
+	width: 40%;
+	height: 100%;
+	shape-margin: 8vw;
+	background-color: white;
+	right: 0;
+}
+#experience-left-shape-inner_right{
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 90% 100%);
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 90% 100%);
+	shape-outside: polygon(0 0, 100% 0, 100% 100%, 90% 100%);
+	float: right;
+	width: 60%;
+	height: 100%;
+	shape-margin: 3vw;
+	background: linear-gradient(rgba(50,50,50,0.9), rgba(50,50,50,0));
+	right: 0;
+}
+#experience-right-shape{
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 36%, 50% 36%);
+	clip-path: polygon(0 0, 100% 0, 100% 36%, 50% 36%);
+	shape-outside: polygon(0 0, 100% 0, 100% 36%, 50% 36%);
+	float: right;
+	width: 40.75%;
+	height: 100%;
+	shape-margin: 5vw;
+	background: linear-gradient(rgba(133,133,135,0.5), rgba(206, 242, 147,0.7));
+	right: 0;
+	position: absolute;
+	z-index:-2;
+}
+#experience-left-shape-inner_left_left{
+	-webkit-clip-path: polygon(0 15%, 0% 100%, 120% 100%);
+	clip-path: polygon(0 15%, 0% 100%, 120% 100%);
+	shape-outside: polygon(0 15%, 0% 100%, 120% 100%);
+	float: left;
+	width: 60%;
+	height: 100%;
+	shape-margin: 10vw;
+	background-color: white;
+}
+#experience-left-shape-inner_right_right{
+	-webkit-clip-path: polygon(0% 0%, 100% 0, 100% 40%);
+	clip-path: polygon(0% 0%, 100% 0, 100% 40%);
+	shape-outside:  polygon(0% 0%, 100% 0, 100% 40%);
+	float: right;
+	width: 37%;
+	height: 100%;
+	shape-margin: 3vw;
+	background: transparent;
+}
+
+.exp-category {
+	color: black; 
+	padding: 0 2em;
+}
+
+.exp-section {
+	margin-bottom: 2em;
+}
+
+.exp-section h5:hover {
+	color: rgb(206, 242, 147);
+}
+
+/********************************************************** CSS - CONTACT **********************************************************/
+
+#contact-left-shape{
+	-webkit-clip-path: polygon(0 40%, 0% 100%, 20% 100%);
+	clip-path: polygon(0 40%, 0% 100%, 20% 100%);
+	shape-outside: polygon(0 40%, 0% 100%, 20% 100%);
+	float: left;
+	width: 100%;
+	height: 100%;
+	shape-margin: 5vw;
+	background: linear-gradient(pink, pink, grey);
+}
+
+
+#contact-right-shape{
+	-webkit-clip-path: polygon(79.25% 0%, 100% 34.5%, 100% 100%, 66% 100%, 9% 0);
+	clip-path: polygon(79.25% 0%, 100% 34.5%, 100% 100%, 66% 100%, 9% 0);
+	shape-outside: polygon(79.25% 0%, 100% 34.5%, 100% 100%, 66% 100%, 9% 0);
+	float: right;
+	width: 69%;
+	height: 100%;
+	shape-margin: 5vw;
+	position:absolute;
+	background: linear-gradient(rgba(50,50,50, 0.8), rgba(206, 242, 147,0.7) );
+	right: 0;
+}
+
+
+/* Carousel */
+.carousel-buttons{
+	z-index:1; 
+	position: absolute;
+	bottom:0;
+	margin-left: 40%;
+}
+.item{
+	display: inline-block;
+	padding:.5vw;
+	background-color: transparent;
+	border: 3px solid white;
+	border-radius: 50%;
+	margin: .25vw;
+}
+.item.active{
+	background-color: grey;
+}
+.item:hover{
+	background-color: orange;
+}
