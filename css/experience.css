@@ -41,13 +41,13 @@
 }
 
 #experience #experience-main #experience-left-shape-inner_left {
-  -webkit-clip-path: polygon(0 20%, 0% 100%, 100% 100%);
-  clip-path: polygon(0 20%, 0% 100%, 100% 100%);
-  shape-outside: polygon(0 20%, 0% 100%, 100% 100%);
+  -webkit-clip-path: polygon(0 11%, 0% 100%, 100% 100%);
+  clip-path: polygon(0 11%, 0% 100%, 100% 100%);
+  shape-outside: polygon(0 11%, 0% 100%, 100% 100%);
   float: left;
   width: 40%;
   height: 100%;
-  shape-margin: 8vw;
+  shape-margin: 5em;
   right: 0;
 }
 
@@ -115,29 +115,18 @@
 }
 
 #experience #experience-sub #experience-left-shape-inner_left_left {
-  -webkit-clip-path: polygon(0 15%, 0% 100%, 120% 100%);
-  clip-path: polygon(0 15%, 0% 100%, 120% 100%);
-  shape-outside: polygon(0 15%, 0% 100%, 120% 100%);
+  -webkit-clip-path: polygon(0 0, 0% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 0% 0, 100% 100%, 0% 100%);
+  shape-outside: polygon(0 0, 0% 0, 100% 100%, 0% 100%);
   float: left;
-  width: 60%;
+  width: 90%;
   height: 100%;
-  shape-margin: 10vw;
-}
-
-#experience #experience-sub #experience-left-shape-inner_right_right {
-  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 40%);
-  clip-path: polygon(0% 0%, 100% 0, 100% 40%);
-  shape-outside: polygon(0% 0%, 100% 0, 100% 40%);
-  float: right;
-  width: 37%;
-  height: 100%;
-  shape-margin: 3vw;
-  background: transparent;
+  shape-margin: 5em;
 }
 
 .exp-category {
   color: black;
-  padding: 0 2em;
+  padding: 2em;
   max-height: 90vh;
 }
 
