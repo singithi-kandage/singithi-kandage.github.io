@@ -1,0 +1,72 @@
+/********************************************************** CSS - HOME **********************************************************/
+
+#home {
+  height: 120vh;
+}
+
+#home-parallel-div {
+  -webkit-clip-path: polygon(90% 60%, 100% 77%, 100% 100%, 54.5% 100%, 35% 60%);
+  clip-path: polygon(90% 60%, 100% 77%, 100% 100%, 54.5% 100%, 35% 60%);
+  shape-outside: polygon(90% 60%, 100% 77%, 100% 100%, 54.5% 100%, 35% 60%);
+  height: 100%;
+  width: 100vw;
+  shape-margin: 5vw;
+  background-color: rgb(200, 199, 215);
+  position: absolute;
+  float: right;
+  bottom: 0;
+}
+
+#home-left-shape {
+  -webkit-clip-path: polygon(0 0, 40% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 40% 0, 100% 100%, 0% 100%);
+  shape-outside: polygon(0 0, 40% 0, 100% 100%, 0% 100%);
+  float: left;
+  width: 95%;
+  height: 100%;
+  background: linear-gradient(transparent, pink);
+  position: absolute;
+  z-index: -1;
+}
+
+#home-left-shape-inner {
+  -webkit-clip-path: polygon(0 0, 4% 0, 46% 55.5%, 0 55.5%);
+  clip-path: polygon(0 0, 4% 0, 46% 55.5%, 0 55.5%);
+  shape-outside: polygon(0 0, 4% 0, 46% 55.5%, 0 55.5%);
+  float: left;
+  width: 80%;
+  height: 100%;
+  shape-margin: 5vw;
+  background: linear-gradient(
+    rgba(100, 100, 100, 0.4),
+    rgba(100, 100, 100, 0.1)
+  );
+}
+
+#home-left-shape-inner-nested {
+  -webkit-clip-path: polygon(0 25%, 0% 100%, 58% 100%);
+  clip-path: polygon(0 25%, 0% 100%, 58% 100%);
+  shape-outside: polygon(0 25%, 0% 100%, 58% 100%);
+  float: left;
+  width: 69%;
+  height: 100%;
+  margin-top: 10vh;
+  shape-margin: 5vw;
+  background: linear-gradient(rgb(0, 0, 0), rgb(100, 100, 100));
+  opacity: 0.7;
+  position: absolute;
+  z-index: 3;
+}
+
+#home-right-shape {
+  -webkit-clip-path: polygon(0% 0, 100% 0, 100% 55%);
+  clip-path: polygon(0% 0, 100% 0, 100% 55%);
+  shape-outside: polygon(0% 0, 100% 0, 100% 55%);
+  width: 25%;
+  height: 100%;
+  shape-margin: 5vw;
+  background: linear-gradient(rgba(100, 100, 100, 1), rgba(0, 0, 0, 0.95));
+  position: absolute;
+  z-index: 3;
+  right: 0;
+}

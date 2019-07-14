@@ -1,0 +1,187 @@
+/********************************************************** CSS - EXPERIENCE **********************************************************/
+
+#experience {
+  margin-top: -80vh;
+  height: 215vh;
+  background: linear-gradient(
+    transparent,
+    rgba(255, 192, 203, 0.4),
+    rgba(133, 100, 106, 0.9)
+  );
+}
+
+#experience #experience-main {
+  height: 105vh !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(53, 41, 43, 0.9));
+}
+
+#experience #experience-main #experience-left-shape {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 100%, 0 11%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 100%, 0 11%);
+  shape-outside: polygon(0 0, 100% 0, 100% 100%, 40% 100%, 0 11%);
+  float: left;
+  width: 100%;
+  height: 100%;
+  shape-margin: 5vw;
+  position: absolute;
+  right: 0;
+  background: linear-gradient(rgba(30, 30, 30, 0.9), rgba(20, 20, 20, 0.8));
+}
+
+#experience #experience-main #experience-right-shape {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 100%, 0 11%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 100%, 0 11%);
+  shape-outside: polygon(0 0, 100% 0, 100% 100%, 40% 100%, 0 11%);
+  float: left;
+  width: 100%;
+  height: 100%;
+  shape-margin: 5vw;
+  position: absolute;
+  right: 0;
+}
+
+#experience #experience-main #experience-left-shape-inner_left {
+  -webkit-clip-path: polygon(0 20%, 0% 100%, 100% 100%);
+  clip-path: polygon(0 20%, 0% 100%, 100% 100%);
+  shape-outside: polygon(0 20%, 0% 100%, 100% 100%);
+  float: left;
+  width: 40%;
+  height: 100%;
+  shape-margin: 8vw;
+  right: 0;
+}
+
+#experience #experience-main #experience-left-shape-inner_right {
+  -webkit-clip-path: polygon(35% 0, 100% 0, 100% 100%);
+  clip-path: polygon(35% 0, 100% 0, 100% 100%);
+  shape-outside: polygon(35% 0, 100% 0, 100% 100%);
+  float: right;
+  width: 50%;
+  height: 75%;
+  shape-margin: 2vw;
+  background-color: transparent;
+  right: 0;
+}
+
+#experience #experience-sub #experience-left-shape {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 45% 100%, 0 11%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 45% 100%, 0 11%);
+  shape-outside: polygon(0 0, 100% 0, 100% 100%, 45% 100%, 0 11%);
+  float: left;
+  width: 100%;
+  height: 100%;
+  shape-margin: 5vw;
+  position: absolute;
+  background: linear-gradient(
+    rgba(25, 25, 25, 0.9),
+    rgba(50, 50, 50, 0.7),
+    transparent
+  );
+  right: 0;
+}
+
+#experience #experience-sub #experience-left-shape-inner_left {
+  -webkit-clip-path: polygon(0 20%, 0% 100%, 100% 100%);
+  clip-path: polygon(0 20%, 0% 100%, 100% 100%);
+  shape-outside: polygon(0 20%, 0% 100%, 100% 100%);
+  float: left;
+  width: 40%;
+  height: 100%;
+  shape-margin: 8vw;
+  right: 0;
+}
+
+#experience #experience-sub #experience-left-shape-inner_right {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 90% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 90% 100%);
+  shape-outside: polygon(0 0, 100% 0, 100% 100%, 90% 100%);
+  float: right;
+  width: 60%;
+  height: 100%;
+  shape-margin: 3vw;
+  background: linear-gradient(rgba(50, 50, 50, 0.9), rgba(50, 50, 50, 0));
+  right: 0;
+}
+
+#experience #experience-sub #experience-main-left-shape {
+  -webkit-clip-path: polygon(20% 0%, 100% 0, 100% 100%, 74% 100%);
+  clip-path: polygon(20% 0%, 100% 0, 100% 100%, 74% 100%);
+  shape-outside: polygon(20% 0%, 100% 0, 100% 100%, 74% 100%);
+  float: right;
+  width: 100%;
+  height: 100%;
+  shape-margin: 5vw;
+  right: 0;
+}
+
+#experience #experience-sub #experience-left-shape-inner_left_left {
+  -webkit-clip-path: polygon(0 15%, 0% 100%, 120% 100%);
+  clip-path: polygon(0 15%, 0% 100%, 120% 100%);
+  shape-outside: polygon(0 15%, 0% 100%, 120% 100%);
+  float: left;
+  width: 60%;
+  height: 100%;
+  shape-margin: 10vw;
+}
+
+#experience #experience-sub #experience-left-shape-inner_right_right {
+  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 40%);
+  clip-path: polygon(0% 0%, 100% 0, 100% 40%);
+  shape-outside: polygon(0% 0%, 100% 0, 100% 40%);
+  float: right;
+  width: 37%;
+  height: 100%;
+  shape-margin: 3vw;
+  background: transparent;
+}
+
+.exp-category {
+  color: black;
+  padding: 0 2em;
+  max-height: 90vh;
+}
+
+.exp-section {
+  margin-bottom: 2em;
+  color: rgb(200, 200, 200);
+}
+
+.exp-section h5:hover {
+  color: orange;
+}
+
+.exp-section ul {
+  padding: 1em 0;
+  display: none;
+  color: rgb(230, 230, 230);
+}
+
+#content-exp0,
+#content-exp1,
+#content-exp2 {
+  padding: 2em;
+  max-height: 110vh;
+}
+
+#content-exp0 h2,
+#content-exp1 h2,
+#content-exp2 h2 {
+  color: orange;
+  border: 1px solid orange;
+  margin-left: 2em;
+  width: 15vw;
+  margin-bottom: 1em;
+}
+
+#content-exp1 h2 {
+  margin-left: 5em;
+  width: 15vw;
+}
+
+#content-exp2 h2 {
+  margin-left: 2.5em;
+}
+
+#exp-section ul li {
+  padding-left: 1em;
+}

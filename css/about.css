@@ -1,0 +1,85 @@
+/********************************************************** CSS - ABOUT **********************************************************/
+
+#about {
+  height: 120vh;
+  background: linear-gradient(transparent, transparent, rgb(233, 213, 219));
+}
+
+#about-left-shape {
+  -webkit-clip-path: polygon(0 20%, 60% 20%, 100% 100%, 20% 100%, 0 54%);
+  clip-path: polygon(0 20%, 60% 20%, 100% 100%, 20% 100%, 0 54%);
+  shape-outside: polygon(0 20%, 60% 20%, 100% 100%, 20% 100%, 0 54%);
+  float: left;
+  width: 118.5%;
+  height: 100%;
+  shape-margin: 2vw;
+  background: linear-gradient(rgb(255, 234, 232), grey);
+  overflow: hidden;
+  position: absolute;
+}
+
+#about-left-shape-inner_left {
+  -webkit-clip-path: polygon(0 55%, 0 100%, 40% 100%);
+  clip-path: polygon(0 55%, 0 100%, 40% 100%);
+  shape-outside: polygon(0 55%, 0 100%, 40% 100%);
+  float: left;
+  width: 50%;
+  height: 100%;
+  shape-margin: 5vw;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+#about-left-shape-inner_right {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+  shape-outside: polygon(0 0, 100% 0, 100% 100%);
+  float: right;
+  width: 50%;
+  height: 100%;
+  shape-margin: 5vw;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+#about-right-shape {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 56%, 61% 56%);
+  clip-path: polygon(0 0, 100% 0, 100% 56%, 61% 56%);
+  shape-outside: polygon(0 0, 100% 0, 100% 56%, 61% 56%);
+  float: right;
+  right: 0;
+  width: 46%;
+  height: 100%;
+  margin-top: -1em;
+  shape-margin: 2vw;
+  background-color: rgba(200, 199, 215, 1);
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+#about-right-shape img {
+  height: auto;
+  width: 100%;
+  float: right;
+  margin-top: 8vh;
+}
+
+#content-about {
+  margin-top: 25vh;
+  padding: 2em;
+}
+
+#content-about h2 {
+  color: rgb(60, 60, 60);
+  border: 1px solid rgb(60, 60, 60);
+  margin-bottom: 1em;
+}
+
+#content-about p {
+  color: black;
+}
+
+#content-about i {
+  font-size: 0.75em;
+}

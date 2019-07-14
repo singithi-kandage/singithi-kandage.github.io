@@ -1,0 +1,58 @@
+/********************************************************** CSS - CONTACT **********************************************************/
+#contact p {
+  color: white;
+  font-size: 1.5vw;
+}
+
+#contact-left-shape {
+  -webkit-clip-path: polygon(0 40%, 0% 100%, 20% 100%);
+  clip-path: polygon(0 40%, 0% 100%, 20% 100%);
+  shape-outside: polygon(0 40%, 0% 100%, 20% 100%);
+  float: left;
+  width: 100%;
+  height: 100%;
+  shape-margin: 5vw;
+  background-color: rgb(50, 50, 50);
+}
+
+#contact-right-shape {
+  -webkit-clip-path: polygon(79.25% 0%, 100% 34.5%, 100% 100%, 66% 100%, 9% 0);
+  clip-path: polygon(79.25% 0%, 100% 34.5%, 100% 100%, 66% 100%, 9% 0);
+  shape-outside: polygon(79.25% 0%, 100% 34.5%, 100% 100%, 66% 100%, 9% 0);
+  float: right;
+  width: 69%;
+  height: 100%;
+  shape-margin: 5vw;
+  position: absolute;
+  background: linear-gradient(rgba(255, 192, 203, 0.5), rgba(50, 50, 50, 0.8));
+  right: 0;
+}
+
+#content-contact1 {
+  margin-left: 30vw;
+  margin-top: 15vw;
+  width: 50%;
+}
+
+#content-contact2 {
+  background-color: rgba(50, 50, 50, 0.5);
+  margin-top: 9.5vw;
+  height: 20vw;
+  padding: 2em;
+  position: absolute;
+  z-index: -2;
+  width: 100%;
+}
+
+#content-contact2 #content {
+  margin-left: 10vw;
+  margin-top: 3vw;
+  width: 50%;
+}
+
+#content-contact2 h2 {
+  color: white;
+  border: 1px solid white;
+  margin-bottom: 1em;
+  margin-left: 4.5em;
+}

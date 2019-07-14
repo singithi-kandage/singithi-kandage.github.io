@@ -1,0 +1,208 @@
+/********************************************************** CSS - PROJECTS **********************************************************/
+
+#projects {
+  margin-top: -0.5px;
+  margin-bottom: 100vh;
+}
+
+#projects #projects-body {
+  background: linear-gradient(rgba(133, 133, 135, 1), rgba(133, 133, 135, 0.5));
+}
+
+#projects-header {
+  padding: 5vh;
+  position: absolute;
+  z-index: 3;
+  width: 100vw;
+}
+
+#projects-header h2 {
+  color: rgb(145, 91, 87);
+  border: 1px solid rgb(145, 91, 87);
+}
+
+#projects-left-shape {
+  -webkit-clip-path: polygon(0 0, 25% 0, 75% 100%, 0% 100%);
+  clip-path: polygon(0 0, 25% 0, 75% 100%, 0% 100%);
+  shape-outside: polygon(0 0, 25% 0, 75% 100%, 0% 100%);
+  float: left;
+  width: 79%;
+  height: 100%;
+  shape-margin: 2vw;
+  background-color: rgb(233, 213, 219);
+  overflow: hidden;
+  position: absolute;
+  z-index: 2;
+}
+
+#projects-left-shape-inner {
+  -webkit-clip-path: polygon(10% 0, 100% 0, 100% 100%, 90% 100%);
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 90% 100%);
+  shape-outside: polygon(10% 0, 100% 0, 100% 100%, 90% 100%);
+  float: right;
+  width: 68%;
+  height: 100%;
+  shape-margin: 6vw;
+  background-color: white;
+  overflow: hidden;
+}
+
+#projects-viewer {
+  height: 87vh;
+  width: 50%;
+  overflow: hidden;
+  margin-top: 2em;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+}
+
+#projects-viewer-info::-webkit-scrollbar {
+  width: 1em;
+}
+
+#projects-viewer-info::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+#projects-viewer-info::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+#projects-viewer-image {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+#projects-viewer-info {
+  height: 60%;
+  padding: 0 2em;
+  margin: 7vw 0 2vw 2.5vw;
+  direction: rtl;
+  overflow-y: auto;
+}
+
+#projects-viewer-info ul {
+  padding-left: 2em;
+}
+
+.project-info {
+  direction: ltr;
+}
+
+#projects-slideshow-container {
+  height: 5vw;
+  width: 60%;
+  display: inline-block;
+  position: absolute;
+  padding-left: 2.5em;
+}
+
+#projects-slideshow {
+  height: 100%;
+  width: 94%;
+  overflow: hidden;
+  display: inline-block;
+  margin-left: 0.4em;
+}
+
+#projects-slides {
+  height: 100%;
+  width: 200vw;
+  display: inline-block;
+}
+
+.arrow {
+  width: 2%;
+  padding: 1.8em 0.25em;
+  display: inline-block;
+  font-size: 1vw;
+}
+
+#left-arrow {
+  float: left;
+}
+
+#right-arrow {
+  float: right;
+}
+
+.slide {
+  width: 15vw;
+  height: 100%;
+  background: linear-gradient(rgba(200, 200, 200, 0.2), grey);
+  display: inline-block;
+  font-size: 1vw;
+  padding: 0.5em;
+}
+
+.slide:hover {
+  background: linear-gradient(rgba(200, 200, 200, 0.2), white);
+}
+
+.project {
+  visibility: hidden;
+}
+
+#econmobile-image .slide-image,
+#stockboy-image .slide-image {
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 3em;
+}
+
+#oec-image .slide-image {
+  padding-top: 2em;
+  width: 95%;
+}
+
+#freshcity-image .slide-image {
+  width: 92%;
+  margin: 0 auto;
+  padding-top: 15vh;
+}
+
+#projects-tail {
+  height: 100vh;
+  background-color: transparent;
+}
+
+#projects-tail-right-shape {
+  -webkit-clip-path: polygon(35% 0, 100% 0, 100% 100%);
+  clip-path: polygon(35% 0, 100% 0, 100% 100%);
+  shape-outside: polygon(35% 0, 100% 0, 100% 100%);
+  float: right;
+  width: 62.5%;
+  height: 93%;
+  shape-margin: 2vw;
+  background: linear-gradient(rgba(133, 133, 135, 0.5), rgba(255, 192, 203, 1));
+  right: 0;
+}
+
+/* Carousel */
+.carousel-buttons {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  margin-left: 40%;
+}
+.item {
+  display: inline-block;
+  padding: 0.5vw;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin: 0.25vw;
+}
+
+.item.active {
+  background-color: rgb(233, 213, 219);
+}
+
+.item:hover {
+  background-color: white;
+}
