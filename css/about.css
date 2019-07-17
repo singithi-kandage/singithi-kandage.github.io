@@ -2,7 +2,7 @@
 
 #about {
   height: 120vh;
-  background: linear-gradient(transparent, transparent, rgb(233, 213, 219));
+  background: linear-gradient(transparent, transparent, rgb(238, 217, 195));
 }
 
 #about-left-shape {
@@ -13,7 +13,7 @@
   width: 118.5%;
   height: 100%;
   shape-margin: 2vw;
-  background: linear-gradient(rgb(255, 234, 232), grey);
+  background-color: rgb(192, 192, 192);
   overflow: hidden;
   position: absolute;
 }

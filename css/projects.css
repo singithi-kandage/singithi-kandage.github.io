@@ -3,10 +3,16 @@
 #projects {
   margin-top: -0.5px;
   margin-bottom: 100vh;
+  position: absolute;
+  z-index: 2;
 }
 
 #projects #projects-body {
-  background: linear-gradient(rgba(133, 133, 135, 1), rgba(133, 133, 135, 0.5));
+  background: linear-gradient(
+    rgba(192, 192, 192, 1),
+    rgba(192, 192, 192, 1),
+    rgb(192, 192, 192, 0.2)
+  );
 }
 
 #projects-header {
@@ -17,8 +23,8 @@
 }
 
 #projects-header h2 {
-  color: rgb(145, 91, 87);
-  border: 1px solid rgb(145, 91, 87);
+  color: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.6);
 }
 
 #projects-left-shape {
@@ -29,7 +35,7 @@
   width: 79%;
   height: 100%;
   shape-margin: 2vw;
-  background-color: rgb(233, 213, 219);
+  background-color: rgb(238, 217, 195);
   overflow: hidden;
   position: absolute;
   z-index: 2;
@@ -58,17 +64,16 @@
 }
 
 #projects-viewer-info::-webkit-scrollbar {
-  width: 1em;
+  width: 0.75em;
 }
 
 #projects-viewer-info::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgba(50, 50, 50, 0.2);
 }
 
 #projects-viewer-info::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  outline: 1px solid slategrey;
+  background-color: rgba(50, 50, 50, 0.2);
+  border-radius: 10px;
 }
 
 #projects-viewer-image {
@@ -83,7 +88,7 @@
   padding: 0 2em;
   margin: 7vw 0 2vw 2.5vw;
   direction: rtl;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 
 #projects-viewer-info ul {
@@ -134,10 +139,12 @@
 .slide {
   width: 15vw;
   height: 100%;
-  background: linear-gradient(rgba(200, 200, 200, 0.2), grey);
+  background-color: rgba(0, 0, 0, 0.2);
   display: inline-block;
-  font-size: 1vw;
+  font-size: 1em;
   padding: 0.5em;
+  font-weight: bolder;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .slide:hover {
@@ -179,7 +186,7 @@
   width: 62.5%;
   height: 93%;
   shape-margin: 2vw;
-  background: linear-gradient(rgba(133, 133, 135, 0.5), rgba(255, 192, 203, 1));
+  background: linear-gradient(rgba(133, 133, 135, 0.5), rgba(238, 217, 195, 1));
   right: 0;
 }
 

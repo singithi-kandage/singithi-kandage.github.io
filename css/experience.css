@@ -1,18 +1,20 @@
 /********************************************************** CSS - EXPERIENCE **********************************************************/
 
 #experience {
-  margin-top: -80vh;
+  margin-top: 115vh;
   height: 215vh;
   background: linear-gradient(
     transparent,
-    rgba(255, 192, 203, 0.4),
-    rgba(133, 100, 106, 0.9)
+    rgba(238, 217, 195, 0.4),
+    rgba(226, 181, 135, 0.9)
   );
+  position: absolute;
+  z-index: 1;
 }
 
 #experience #experience-main {
   height: 105vh !important;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(53, 41, 43, 0.9));
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(212, 156, 99, 0.9));
 }
 
 #experience #experience-main #experience-left-shape {
