@@ -2,9 +2,7 @@
 
 #projects {
   margin-top: -0.5px;
-  margin-bottom: 100vh;
-  position: absolute;
-  z-index: 2;
+  margin-bottom: 15vh;
 }
 
 #projects #projects-body {
@@ -188,6 +186,8 @@
   shape-margin: 2vw;
   background: linear-gradient(rgba(133, 133, 135, 0.5), rgba(238, 217, 195, 1));
   right: 0;
+  position: absolute;
+  z-index: 1;
 }
 
 /* Carousel */

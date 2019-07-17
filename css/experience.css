@@ -1,7 +1,6 @@
 /********************************************************** CSS - EXPERIENCE **********************************************************/
 
 #experience {
-  margin-top: 115vh;
   height: 215vh;
   background: linear-gradient(
     transparent,
@@ -9,7 +8,7 @@
     rgba(226, 181, 135, 0.9)
   );
   position: absolute;
-  z-index: 1;
+  z-index: 2;
 }
 
 #experience #experience-main {
@@ -54,14 +53,14 @@
 }
 
 #experience #experience-main #experience-left-shape-inner_right {
-  -webkit-clip-path: polygon(35% 0, 100% 0, 100% 100%);
-  clip-path: polygon(35% 0, 100% 0, 100% 100%);
-  shape-outside: polygon(35% 0, 100% 0, 100% 100%);
+  -webkit-clip-path: polygon(32% 0, 100% 0, 100% 100%);
+  clip-path: polygon(32% 0, 100% 0, 100% 100%);
+  shape-outside: polygon(32% 0, 100% 0, 100% 100%);
   float: right;
   width: 50%;
   height: 75%;
   shape-margin: 2vw;
-  background-color: transparent;
+  background: linear-gradient(rgba(133, 133, 135, 0.5), rgba(238, 217, 195, 1));
   right: 0;
 }
 
