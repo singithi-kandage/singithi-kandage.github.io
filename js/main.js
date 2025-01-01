@@ -1,231 +1,216 @@
-$(document).ready(function() {
-  var content_about = $("#content-about");
-  var content_projects = $(
-    "#projects-viewer-image, #projects-viewer-info, #projects-slideshow-container, #projects-header"
-  );
-  var content_exp = $("#content-exp1, #content-exp2");
-  var content_contact = $("#content-contact1, #content-contact2");
+var c = document.getElementById("c");
+var ctx = c.getContext("2d");
+var cH;
+var cW;
+var bgColor = "#FFB57C"; // Peach;
+var animations = [];
+var circles = [];
 
-  /*Nav Click Events*/
-  $("#home-link").click(function() {
-    $("html, body").animate(
-      {
-        scrollTop: $("#home").offset().top
-      },
-      1000
-    );
-  });
-
-  $("#about-link").click(function() {
-    $("html, body").animate(
-      {
-        scrollTop: $("#about").offset().top + 30
-      },
-      1000
-    );
-  });
-
-  $("#projects-link").click(function() {
-    $("html, body").animate(
-      {
-        scrollTop: $("#projects").offset().top - 50
-      },
-      1000
-    );
-  });
-
-  $("#experience-link").click(function() {
-    $("html, body").animate(
-      {
-        scrollTop: $("#experience").offset().top - 50
-      },
-      1000
-    );
-  });
-
-  $("#contact-link").click(function() {
-    $("html, body").animate(
-      {
-        scrollTop: $("#contact").offset().top - 15
-      },
-      1000
-    );
-  });
-
-  /*Page Scroll Events*/
-
-  var home_top = $("#home").offset().top;
-  var about_top = $("#about").offset().top;
-  var projects_top = $("#projects").offset().top;
-  var exp_top = $("#experience").offset().top - 100;
-  var contact_top = $("#contact").offset().top - 100;
-  var $window = $(window);
-
-  $window.on("scroll", function() {
-    if ($window.scrollTop() >= home_top && $window.scrollTop() < 715) {
-      content_about.fadeOut();
-    }
-    if ($window.scrollTop() >= 715 && $window.scrollTop() < 1430) {
-      content_about.fadeIn();
-      content_projects.fadeOut();
-    }
-    if ($window.scrollTop() >= 1530 && $window.scrollTop() < 2100) {
-      content_projects.fadeIn();
-      content_about.fadeOut();
-      content_exp.fadeOut();
-      content_contact.fadeOut();
-    }
-    if ($window.scrollTop() >= 2500 && $window.scrollTop() < 3400) {
-      content_exp.fadeIn();
-      content_projects.fadeOut();
-      content_contact.fadeOut();
-    }
-    if ($window.scrollTop() >= 3800) {
-      content_exp.fadeOut();
-      content_contact.fadeIn();
-    }
-
-    if ($window.scrollTop() >= home_top && $window.scrollTop() < about_top) {
-      $(".menu-item").removeClass("active");
-      $("#home-link").addClass("active");
-    }
-    if (
-      $window.scrollTop() >= about_top &&
-      $window.scrollTop() < projects_top
-    ) {
-      $(".menu-item").removeClass("active");
-      $("#about-link").addClass("active");
-    }
-    if ($window.scrollTop() >= projects_top && $window.scrollTop() < exp_top) {
-      $(".menu-item").removeClass("active");
-      $("#projects-link").addClass("active");
-    }
-    if ($window.scrollTop() >= exp_top && $window.scrollTop() < contact_top) {
-      $(".menu-item").removeClass("active");
-      $("#experience-link").addClass("active");
-    }
-    if ($window.scrollTop() >= contact_top) {
-      $(".menu-item").removeClass("active");
-      $("#contact-link").addClass("active");
-    }
-  });
-
-  /*Carousel Events*/
-
-  // Gallery events
-  var projects = $(".project");
-  var project_active = $(".project.active");
-  var slideIndex = 1;
-  var selected = null;
-  var x = null;
-  var dots = null;
-
-  showProject(project_active);
-
-  $(".slide").click(function() {
-    var id = $(this).attr("id");
-    var split = id.split("-");
-    var target = "#" + split[0] + "-carousel";
-
-    project_active = $(".project" + target);
-    showProject(project_active);
-  });
-
-  function showProject(project_active) {
-    $("#projects-viewer-image").empty();
-    $("#projects-viewer-info").empty();
-
-    var project_image = $(project_active).find(".project-image");
-    var project_info = $(project_active).find(".project-info");
-
-    for (var i = 0; i < projects.length; i++) {
-      $(projects[i])
-        .find(".project-image")
-        .fadeOut();
-      $(projects[i])
-        .find(".project-info")
-        .fadeOut();
-      $(projects[i]).removeClass("active");
-    }
-    $(project_active).addClass("active");
-
-    $(project_image)
-      .clone()
-      .appendTo("#projects-viewer-image")
-      .fadeIn();
-    $(project_info)
-      .clone()
-      .appendTo("#projects-viewer-info")
-      .fadeIn();
-
-    selected = $("#projects-viewer-image").find(".project-image");
-    x = $(selected).find(".slide-image");
-    dots = $(selected)
-      .find(".carousel-buttons")
-      .find(".item");
-
-    for (var i = 0; i < dots.length; i++) {
-      $(dots[i]).on("click", displaySlide);
-    }
-
-    $("#projects-viewer-image").fadeIn();
-    $("#projects-viewer-info").fadeIn();
-
-    showDivs(slideIndex);
+var colorPicker = (function () {
+  var colors = [
+    "#FFB57C", // Peach
+    "#E420B9", // Magenta
+    "#70A288", // Olive Green
+    "#12296B", // Dark Blue
+  ];
+  var index = 0;
+  function next() {
+    index = index++ < colors.length - 1 ? index : 0;
+    return colors[index];
   }
-
-  // Slideshow events
-
-  function displaySlide() {
-    var n = $(this).attr("id");
-    slideIndex = n;
-    showDivs(n);
+  function current() {
+    return colors[index];
   }
+  return {
+    next: next,
+    current: current,
+  };
+})();
 
-  function showDivs(n) {
-    //alert("showDiv: " + n);
-    var i;
-    if (n > x.length) {
-      slideIndex = 1;
-    }
-    if (n < 1) {
-      slideIndex = x.length;
-    }
-    for (i = 0; i < x.length; i++) {
-      $(dots[i]).removeClass("active");
-      $(x[i]).css("display", "none");
-    }
-    $(x[slideIndex - 1]).css("display", "block");
-    $(dots[slideIndex - 1]).addClass("active");
+function removeAnimation(animation) {
+  var index = animations.indexOf(animation);
+  if (index > -1) animations.splice(index, 1);
+}
+
+function calcPageFillRadius(x, y) {
+  var l = Math.max(x - 0, cW - x);
+  var h = Math.max(y - 0, cH - y);
+  return Math.sqrt(Math.pow(l, 2) + Math.pow(h, 2));
+}
+
+function addClickListeners() {
+  document.addEventListener("touchstart", handleEvent);
+  document.addEventListener("mousedown", handleEvent);
+}
+
+function handleEvent(e) {
+  if (e.touches) {
+    e.preventDefault();
+    e = e.touches[0];
   }
+  var currentColor = colorPicker.current();
+  var nextColor = colorPicker.next();
+  var targetR = calcPageFillRadius(e.pageX, e.pageY);
+  var rippleSize = Math.min(200, cW * 0.4);
+  var minCoverDuration = 750;
 
-  var animationSpeed = 700;
-  var width = "17vw";
+  var pageFill = new Circle({
+    x: e.pageX,
+    y: e.pageY,
+    r: 0,
+    fill: nextColor,
+  });
+  var fillAnimation = anime({
+    targets: pageFill,
+    r: targetR,
+    duration: Math.max(targetR / 2, minCoverDuration),
+    easing: "easeOutQuart",
+    complete: function () {
+      bgColor = pageFill.fill;
+      removeAnimation(fillAnimation);
+    },
+  });
 
-  //Arrow events
-  $("#left-arrow").click(function() {
-    if ($("#projects-slides").offset().left <= 10) {
-      $("#projects-slides").animate(
-        { "margin-left": "+=" + width },
-        animationSpeed
-      );
+  var ripple = new Circle({
+    x: e.pageX,
+    y: e.pageY,
+    r: 0,
+    fill: currentColor,
+    stroke: {
+      width: 3,
+      color: currentColor,
+    },
+    opacity: 1,
+  });
+  var rippleAnimation = anime({
+    targets: ripple,
+    r: rippleSize,
+    opacity: 0,
+    easing: "easeOutExpo",
+    duration: 900,
+    complete: removeAnimation,
+  });
+
+  var particles = [];
+  for (var i = 0; i < 32; i++) {
+    var particle = new Circle({
+      x: e.pageX,
+      y: e.pageY,
+      fill: currentColor,
+      r: anime.random(24, 48),
+    });
+    particles.push(particle);
+  }
+  var particlesAnimation = anime({
+    targets: particles,
+    x: function (particle) {
+      return particle.x + anime.random(rippleSize, -rippleSize);
+    },
+    y: function (particle) {
+      return particle.y + anime.random(rippleSize * 1.15, -rippleSize * 1.15);
+    },
+    r: 0,
+    easing: "easeOutExpo",
+    duration: anime.random(1000, 1300),
+    complete: removeAnimation,
+  });
+  animations.push(fillAnimation, rippleAnimation, particlesAnimation);
+}
+
+function extend(a, b) {
+  for (var key in b) {
+    if (b.hasOwnProperty(key)) {
+      a[key] = b[key];
     }
-  });
-  $("#right-arrow").click(function() {
-    if ($("#projects-slides").offset().left >= -130) {
-      $("#projects-slides").animate(
-        { "margin-left": "-=" + width },
-        animationSpeed
-      );
-    }
-  });
+  }
+  return a;
+}
 
-  // Experience
-  var exp_section = $(".exp-section");
+var Circle = function (opts) {
+  extend(this, opts);
+};
 
-  exp_section.on("click", function() {
-    $(this)
-      .find("ul")
-      .fadeToggle();
-  });
+Circle.prototype.draw = function () {
+  ctx.globalAlpha = this.opacity || 1;
+  ctx.beginPath();
+  ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI, false);
+  if (this.stroke) {
+    ctx.strokeStyle = this.stroke.color;
+    ctx.lineWidth = this.stroke.width;
+    ctx.stroke();
+  }
+  if (this.fill) {
+    ctx.fillStyle = this.fill;
+    ctx.fill();
+  }
+  ctx.closePath();
+  ctx.globalAlpha = 1;
+};
+
+var animate = anime({
+  duration: Infinity,
+  update: function () {
+    ctx.fillStyle = bgColor;
+    ctx.fillRect(0, 0, cW, cH);
+    animations.forEach(function (anim) {
+      anim.animatables.forEach(function (animatable) {
+        animatable.target.draw();
+      });
+    });
+  },
 });
+
+var resizeCanvas = function () {
+  cW = window.innerWidth;
+  cH = window.innerHeight;
+  c.width = cW * devicePixelRatio;
+  c.height = cH * devicePixelRatio;
+  ctx.scale(devicePixelRatio, devicePixelRatio);
+};
+
+(function init() {
+  resizeCanvas();
+  if (window.CP) {
+    // CodePen's loop detection was causin' problems
+    // and I have no idea why, so...
+    window.CP.PenTimer.MAX_TIME_IN_LOOP_WO_EXIT = 6000;
+  }
+  window.addEventListener("resize", resizeCanvas);
+  addClickListeners();
+  if (!!window.location.pathname.match(/fullcpgrid/)) {
+    startFauxClicking();
+  }
+  handleInactiveUser();
+})();
+
+function handleInactiveUser() {
+  var inactive = setTimeout(function () {
+    fauxClick(cW / 2, cH / 2);
+  }, 2000);
+
+  function clearInactiveTimeout() {
+    clearTimeout(inactive);
+    document.removeEventListener("mousedown", clearInactiveTimeout);
+    document.removeEventListener("touchstart", clearInactiveTimeout);
+  }
+
+  document.addEventListener("mousedown", clearInactiveTimeout);
+  document.addEventListener("touchstart", clearInactiveTimeout);
+}
+
+function startFauxClicking() {
+  setTimeout(function () {
+    fauxClick(
+      anime.random(cW * 0.2, cW * 0.8),
+      anime.random(cH * 0.2, cH * 0.8)
+    );
+    startFauxClicking();
+  }, anime.random(200, 900));
+}
+
+function fauxClick(x, y) {
+  var fauxClick = new Event("mousedown");
+  fauxClick.pageX = x;
+  fauxClick.pageY = y;
+  document.dispatchEvent(fauxClick);
+}

@@ -7,13 +7,9 @@
 body {
   font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif !important;
   overflow-x: hidden;
-  background: url("../images/bg2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-}
-
-.container-fluid {
   margin: 0 !important;
   padding: 0 !important;
 }
@@ -33,7 +29,7 @@ body {
 
 /********************************************************** CSS - TEXT **********************************************************/
 
-p {
+/* p {
   font-size: 1.1vw;
 }
 
@@ -64,23 +60,10 @@ a {
 a:hover {
   color: rgb(255, 165, 0);
   text-decoration: none;
-}
+} */
 
-/********************************************************** CSS - SECTIONS **********************************************************/
-
-.tapered-section {
-  height: auto;
-  position: relative;
-  z-index: 1;
-}
-.tapered-section > .tapered-head {
-  height: auto;
-  width: 80vw;
-  padding-top: 10vh;
-  margin: 0 auto;
-}
-.tapered-section > .tapered-tail {
+canvas {
+  display: block;
   width: 100vw;
-  height: 130vh;
-  position: relative;
+  height: 100vh;
 }
